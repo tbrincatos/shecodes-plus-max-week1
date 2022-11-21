@@ -7,17 +7,21 @@ function changeCountry(event) {
     .format("[It is] dddd, MMMM D, YYYY hh:mm A [in Australia/Sydney]");
   let newYorkDate = moment()
     .tz("America/New_York")
-    .format("[It is] dddd, MMMM D, YYYY hh:mm A [in America/New_York]");
+    .format("[It is] dddd, MMMM D, YYYY hh:mm A [in America/New York]");
 
   if (event.target.value === "paris") {
     alert(parisDate);
-  } else if (event.target.value === "sydney") {
+  }
+  if (event.target.value === "sydney") {
     alert(sydneyDate);
-  } else if (event.target.value === "new-york") {
+  }
+  if (event.target.value === "new-york") {
     alert(newYorkDate);
   }
 }
 
-let countryElement = document.querySelector("#countries");
-
-countryElement.addEventListener("change", changeCountry);
+function consoleLog(event) {
+  console.log(event.target.value);
+}
+let countrySelectElement = document.querySelector("#countries");
+countrySelectElement.addEventListener("change", consoleLog);
