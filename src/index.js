@@ -20,8 +20,5 @@ function changeCountry(event) {
   }
 }
 
-function consoleLog(event) {
-  console.log(event.target.value);
-}
-let countrySelectElement = document.querySelector("#countries");
-countrySelectElement.addEventListener("change", consoleLog);
+let countries = document.querySelector("#countries");
+countries.addEventListener("change", changeCountry);
